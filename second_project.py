@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras import layers
 
-# Define the GAN components: Generator and Discriminator
+# Defining the GAN components: Generator and Discriminator
 
 def build_generator():
     model = tf.keras.Sequential()
@@ -34,7 +34,7 @@ def build_gan(generator, discriminator):
     model.add(discriminator)
     return model
 
-# Instantiate the models
+# Instantiating the models
 generator = build_generator()
 discriminator = build_discriminator()
 discriminator.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
@@ -84,7 +84,7 @@ for iteration in range(iterations):
 import cv2
 import dlib
 
-# Load pre-trained models
+# Loading pre-trained models
 pose_predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 detector = dlib.get_frontal_face_detector()
 
